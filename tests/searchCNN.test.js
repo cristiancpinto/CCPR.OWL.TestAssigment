@@ -9,12 +9,12 @@ describe("CNN search", () => {
     await HomeP.open();
   });
 
-  it("search for valid news", async () => {
+  test("search for valid news", async () => {
     /*SearchR = */ await HomeP.SearchCNN("NFL");
     expect(await SearchR.SearchError()).toBe(false);
   });
 
-  it("search for invalid news", async () => {
+  test("search for invalid news", async () => {
     /*SearchR = */ await HomeP.SearchCNN("NFLFake");
     expect(await SearchR.SearchError()).toBe(true);
   });

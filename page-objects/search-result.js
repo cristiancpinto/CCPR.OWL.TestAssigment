@@ -4,9 +4,12 @@ class searchResult {
   }
 
   async SearchError() {
+    console.log("paso antes del try");
     try {
-      await page.waitForSelector(
-        ".cnn-search__no-results.buttonstyles__ButtonBase-augw5g-0:nth-child(2)",
+      console.log("paso despues del try");
+      await page.waitForxpath(
+        /*".cnn-search__no-results.buttonstyles__ButtonBase-augw5g-0:nth-child(2)"*/
+        "//div[@class='cnn-search__no-results no-results--returned']",
         {
           visible: true,
           enable: true
